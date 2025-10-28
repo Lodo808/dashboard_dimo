@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 
@@ -695,7 +696,7 @@ with ai_container:
         "based on the processed data (freshness, emissions, shipments, operators)."
     )
 
-    api_key = st.secrets.get("OPENAI_API_KEY")
+    api_key = os.getenv("OPENAI_API_KEY")
 
     if not api_key:
         st.warning("⚠️ No API Key configured. Add it to Streamlit Secrets or directly in the code.")
