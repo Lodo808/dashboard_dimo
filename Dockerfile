@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8501
 
 # 7. Comando per avviare l'app
-CMD streamlit run app.py --server.port=${PORT:-8501} --server.headless=true --server.enableCORS=false
+CMD streamlit run streamlit_app.py --server.port=${PORT:-8501} --server.headless=true --server.enableCORS=false
